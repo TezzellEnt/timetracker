@@ -1,0 +1,7 @@
+<h1>It Works!</h1>
+
+<ul>
+	<% @works.each do |w| %>
+		<li><%= link_to w.datetimeperformed, w %></li>
+	<% end %>
+</ul>
