@@ -10,5 +10,5 @@ Timetracker::Application.routes.draw do
 
   #named route
   get 'recentworks/:days' => 'works#index'
-
+  get 'timetrackerproject/:slug' => 'projects#show'
 end
