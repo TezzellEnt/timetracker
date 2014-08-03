@@ -17,6 +17,10 @@ class CompaniesController < ApplicationController
 		@company = Company.new
 	end
 
+	def create
+		
+	end
+
 end
 
 
