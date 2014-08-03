@@ -8,18 +8,12 @@
 	<tbody>
 		<tr>
 			<th>User</th>
+			<th>Project</th>
 			<th>Date/Time</th>
 			<th>Hours</th>
 			<th>View</th>
 		</tr>
-		<% @project.works.each do |work| %>
-			<tr>
-				<td><%= work.user %></td>
-				<td><%= work.datetimeperformed.strftime('%m/%d/%Y %H:%M') %></td>
-				<td><%= work.hours %></td>
-				<td><%= link_to 'View', work %></td>
-			</tr>
-		<% end %>
+		<%= render partial: "works/work", collection: @project.works %>
 	</tbody>
 </table>
 
