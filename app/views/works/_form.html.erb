@@ -1,5 +1,3 @@
-
-
 <% if @work.errors.any? %>
 		<div id="errors">
 			<p>Please correct the following <%= pluralize(@work.errors.count, "error") %>:</p>
@@ -11,7 +9,8 @@
 		</div>
 	<% end %>
 
-<%= form_for(@work) do |f| %>
+<% doajax = false unless (defined? doajax) %>
+<%= form_for(@work, remote: doajax) do |f| %>
 	<div>
 		<%= f.label :project_id %>
 		<%= f.collection_select(:project_id, Project.all, :id, :name, prompt: true) %>
